@@ -1,21 +1,42 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { AppLoading } from "expo";
+import { useFonts } from "expo-font";
 
-export default function App() {
+
+/* Contants */
+import FONTS from "./constants/fonts";
+
+const App = () => {
+
+  const [fontsLoading]=useFonts({
+    'Inconsolata' :require("./assets/fonts/Inconsolata.ttf"),
+    'SpaceMonoRegular':require("./assets/fonts/SpaceMono-Regular.ttf"),
+    'SpaceMonoBold':require("./assets/fonts/SpaceMono-Bold.ttf")
+  })
+
+  if(!fontsLoading){
+    return <AppLoading/>
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <View >
+        <Text style={styles.text}>Open up App.js to start working on your app!</Text>
+      </View>
+    </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex:1,
+    paddingVertical:60,
+    paddingHorizontal:0
   },
+  text:{
+    fontFamily:FONTS.SpaceMonoRegular
+  }
 });
+
+export default App;

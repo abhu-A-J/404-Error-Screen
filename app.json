@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "404-page",
-    "slug": "404-page",
+    "name": "404-screen",
+    "slug": "404-screen",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
