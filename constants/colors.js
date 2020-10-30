@@ -1,5 +1,7 @@
 const COLORS={
-	'black':"#333333",
+	"black":"#333",
+	"white":"#fff",
+	"background":"#C1FBFF"
 }
 
 export default COLORS;

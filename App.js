@@ -29,25 +29,25 @@ const App = () => {
   }
 
   return (
-    <SafeAreaView style={styles.screen}>
+      <ScrollView  >
         <View style={styles.container}>
           <Text style={styles.title}>404 NOT FOUND</Text>
           <HeroBox />
         </View>
-    </SafeAreaView>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    paddingVertical: 60,
-    paddingHorizontal: 0,
-    alignItems: "center",
   },
   container: {
-    width: "90%",
-    height: "100%",
+    flex:1,
+    paddingTop:50,
+    paddingHorizontal:20,
+    paddingBottom:20,
+    backgroundColor:COLORS.background
   },
   title: {
     fontFamily: FONTS.Inconsolata,
