@@ -29,11 +29,14 @@ const App = () => {
   }
 
   return (
-      <ScrollView  >
-        <View style={styles.container}>
-          <Text style={styles.title}>404 NOT FOUND</Text>
-          <HeroBox />
-        </View>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      showsHorizontalScrollIndicator={false}
+    >
+      <View style={styles.container}>
+        <Text style={styles.title}>404 NOT FOUND</Text>
+        <HeroBox />
+      </View>
     </ScrollView>
   );
 };
@@ -43,11 +46,11 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   container: {
-    flex:1,
-    paddingTop:50,
-    paddingHorizontal:20,
-    paddingBottom:20,
-    backgroundColor:COLORS.background
+    flex: 1,
+    paddingTop: 50,
+    paddingHorizontal: 20,
+    paddingBottom: 20,
+    backgroundColor: COLORS.background,
   },
   title: {
     fontFamily: FONTS.Inconsolata,
